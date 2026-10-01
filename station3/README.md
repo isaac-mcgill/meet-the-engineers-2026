@@ -4,15 +4,20 @@
 
 ## How it works
 
-1. Work out what the program does by studying the table below. **That table is all you get.**
-2. Write a prompt describing it. Ask your AI for:
-   > a JavaScript function named `solve` that takes one string argument and returns one string
-3. Paste the generated code into `solve.js`, **exactly as the AI gave it to you**.
-4. Run `npm run station3`.
-5. If cases fail, **edit your prompt and paste the new code. Never hand-edit the code.**
+1. **Ask the engineer to describe the problem out loud.** The requirements are
+   given verbally and are not written down anywhere — the only thing you get in
+   writing is the table below. Ask as many follow-up questions as you want.
+2. Study the table and work out what the program does. **The table plus what the
+   engineer tells you is all you get.**
+3. Write a prompt describing it. Start your prompt with:
+   > Write me a JavaScript function named `solve` that takes one string argument and returns one string. The function should...
+4. Paste the generated code into `solve.js`, **exactly as the AI gave it to you**.
+5. Run `npm run station3`.
+6. If cases fail, **edit your prompt and paste the new code. Never hand-edit the code.**
 
-Step 5 is the whole exercise. The moment you patch the code yourself, this becomes an
-ordinary coding problem and you stop practicing the thing we're here for.
+> Writing the spec out in your own words is the whole exercise. You cannot
+> copy-paste it into your AI, because nobody will hand it to you in text.
+
 
 ## What the program does
 
@@ -34,7 +39,14 @@ ordinary coding problem and you stop practicing the thing we're here for.
 
 Every rule you need is recoverable from this table. Read it carefully before you start typing.
 
-## A note on prompt length
+## There are hidden cases too
 
-Some people pass all 13 with a 12-word prompt. Others need 90+. Neither is better — it
-depends on how much the model guesses correctly on its own. Compare results, not word counts.
+`npm run station3` also runs a set of **hidden cases you cannot see**. They use
+the *same* rules with different numbers — there is no extra rule to discover.
+
+So the table is a set of *examples*, not the specification. A prompt that
+describes those seven numbers will pass the visible cases and fail the hidden
+ones. A prompt that describes the underlying **rule** passes both.
+
+Hidden failures stay quiet until all the visible cases pass, so you only ever
+have one problem in front of you at a time.

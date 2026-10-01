@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node station2/rewards.test.js",
     "station2": "node station2/rewards.test.js",
+    "station2:phase2": "node station2/applyAward.test.js",
     "station3": "node station3/check.js"
   }
 }

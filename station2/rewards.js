@@ -46,11 +46,26 @@ function getLeaderboard(awards, limit) {
 }
 
 // ========================= PHASE 2 GOES HERE =========================
-// Add applyAward(state, award) here.
+// Add applyAward(state, award) here, plus createState().
+//
+//   createState()            -> a fresh, empty state object. You decide its shape.
+//   applyAward(state, award) -> updates `state` IN PLACE and returns either
+//                               { accepted: true,  newSpent }   or
+//                               { accepted: false, reason }
+//
+//   An `award` looks like:
+//     { recipientId: 'u1', points: 250, date: '2026-01-15', managerApproved: true }
+//
+//   Rules:
 //   - Awards over 500 points require award.managerApproved === true
 //   - A recipient may not exceed QUARTERLY_BUDGET in any single quarter
-//   - Return { accepted: true, newSpent } or { accepted: false, reason }
-//   - You decide the shape of `state`
+//   - newSpent = that recipient's total for that quarter after this award
+//   - A rejected award must not consume any budget
+//
+// The INSIDE of `state` is entirely your call -- that's the interesting decision
+// here. Only the two function names above are fixed, so the tests can find them.
+//
+// Check your work with:  npm run station2:phase2
 // =====================================================================
 
 module.exports = {
@@ -59,5 +74,8 @@ module.exports = {
   getQuarter,
   sumPoints,
   canAward,
-  getLeaderboard
+  getLeaderboard,
+  // These stay undefined until you write them in Phase 2.
+  createState: typeof createState === 'function' ? createState : undefined,
+  applyAward: typeof applyAward === 'function' ? applyAward : undefined
 };
