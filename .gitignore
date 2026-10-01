@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+
+# Offline fallback page — not published for the 2026 event (StackBlitz only).
+# Kept out of the repo deliberately; re-add if an offline backup is ever needed.
+index.html

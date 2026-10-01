@@ -1,0 +1,11 @@
+{
+  "name": "meet-the-engineers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practice problems for Meet the Engineers Night",
+  "scripts": {
+    "test": "node station2/rewards.test.js",
+    "station2": "node station2/rewards.test.js",
+    "station3": "node station3/check.js"
+  }
+}
