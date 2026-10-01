@@ -65,8 +65,8 @@ Remaining before the event:
    Station 3 traps. Those live in the volunteer guide, not in this repo.
 
 > **No offline fallback is published.** If the venue loses internet, the night stops.
-> If that risk matters, say so and we'll add the self-contained `index.html` page back —
-> it's one file and needs no network at all.
+> A self-contained single-file version of Stations 1–3 exists and can be added if that
+> risk is worth covering — it needs no network at all.
 
 ### Verify before the event
 
