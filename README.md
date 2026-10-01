@@ -1,7 +1,5 @@
 # Meet the Engineers Night
 
-## For students
-
 **Open this link**
 
 ### 👉 https://stackblitz.com/github/isaac-mcgill/meet-the-engineers-2026
