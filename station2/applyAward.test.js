@@ -89,7 +89,7 @@ const award = (recipientId, points, date, managerApproved) =>
       + JSON.stringify(r));
 }
 
-// --- isolation between quarters and recipients -------------------------
+// --- isolation between quarters, years, and recipients -----------------
 {
   const s = createState();
   applyAward(s, award('u1', 900, '2026-01-15', true));
@@ -97,6 +97,16 @@ const award = (recipientId, points, date, managerApproved) =>
   check('each quarter has its own budget',
     r && r.accepted === true && r.newSpent === 900,
     'Q2 should start fresh. got ' + JSON.stringify(r));
+}
+{
+  const s = createState();
+  applyAward(s, award('u1', 900, '2026-01-15', true));
+  const r = applyAward(s, award('u1', 900, '2027-01-15', true));
+  check('Q1 of one year is separate from Q1 of the next',
+    r && r.accepted === true && r.newSpent === 900,
+    'these are two different quarters a year apart, so the 2027 award should '
+      + 'start from zero. Does your state key include the year? got '
+      + JSON.stringify(r));
 }
 {
   const s = createState();
