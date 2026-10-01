@@ -22,7 +22,7 @@ whole function, stop and re-read it. Engineers are looking for understanding of 
 ## Phase 2 — Implement
 
 Add a new function `applyAward(state, award)` where the placeholder comment is in
-`rewards.js`, plus a `createState()` that returns a fresh empty state.
+`rewards.js`, plus a `createState()` that returns a fresh empty state. `state` needs to hold the amount spent per recipient per quarter.
 
 Rules:
 - Awards over **500 points** require `award.managerApproved === true`
@@ -32,9 +32,7 @@ Rules:
   for that quarter after the award
 - A rejected award must not consume any budget
 
-**What's inside `state` is your decision** — that's the interesting part of this
-phase. The tests never look inside it; they only call the two functions. Be ready
-to explain why you shaped it the way you did.
+**The exact shape of the data in `state` is your decision**.
 
 Check your work:
 
@@ -43,14 +41,3 @@ npm run station2:phase2
 ```
 
 This is a separate command, so it won't disturb your Phase 1 results.
-
-## Phase 3 — Extend
-
-No code required. Pick one and talk it through with an engineer:
-
-- What's the time complexity of `getLeaderboard` if there are 2 million awards?
-- Two people have the same points. What order should they come back in? What does the
-  current code actually do?
-- What breaks if points can be **revoked** (negative awards)?
-
----

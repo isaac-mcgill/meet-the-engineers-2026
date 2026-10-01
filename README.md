@@ -1,7 +1,5 @@
 # Meet the Engineers Night
 
-Practice problems for our outreach night. Free to run, nothing to install, no accounts.
-
 ## For students
 
 **Open this link**
@@ -36,8 +34,8 @@ Two standard interview problems, free on LeetCode, **any language**:
 No account and don't want one? Write your solution in StackBlitz instead.
 
 ### Station 2 - Debug & Extend
-`station2/rewards.js` is a small points program. Ten tests, **five of them fail**. Three phases:
-fix the failures, add a feature, then improve the design. Run with `npm run station2`.
+`station2/rewards.js` is a small points program. Ten tests, **five of them fail**. Two phases:
+fix the failures, then add a feature. Run with `npm run station2`.
 
 See [`station2/README.md`](station2/README.md).
 

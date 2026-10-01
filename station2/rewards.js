@@ -62,9 +62,6 @@ function getLeaderboard(awards, limit) {
 //   - newSpent = that recipient's total for that quarter after this award
 //   - A rejected award must not consume any budget
 //
-// The INSIDE of `state` is entirely your call -- that's the interesting decision
-// here. Only the two function names above are fixed, so the tests can find them.
-//
 // Check your work with:  npm run station2:phase2
 // =====================================================================
 
