@@ -20,6 +20,10 @@ npm run station3    # Prompt Problem — check your AI's code
 > **Heads up:** without signing in, StackBlitz does not save your work. Don't refresh the tab
 > mid-problem. (Signing in with GitHub to persist is optional and entirely your call.)
 
+> **Use Chrome, Edge, or Brave**, updated. The editor runs Node *inside your browser*, which
+> needs features that are still beta in Firefox and Safari (Safari must be 16.4+). If you get
+> a blank editor, switch browsers first — that fixes almost every case.
+
 ## Stations
 
 | Station | Folder | AI |
@@ -58,9 +62,15 @@ Remaining before the event:
 1. **Open the StackBlitz link on a school-like network** and confirm
    `npm run station2` prints `5 passed, 5 failed`. If that works, both stations work.
 2. **Print QR codes** for the StackBlitz link and put one on every table.
-3. **Send a pre-event email** telling students to create and verify a free LeetCode
-   account beforehand (needed for Station 1 only), and to bring a laptop plus whatever
-   AI tool they already use.
+3. **Send a pre-event email** telling students to:
+   - create and verify a free LeetCode account (Station 1 only)
+   - bring a laptop with **Chrome or Edge** installed and updated
+   - bring whatever AI tool they already use
+
+   The browser note matters: StackBlitz runs Node in the browser and needs cross-origin
+   isolation plus service workers. Firefox/Safari are beta, and some school proxies break
+   it outright. Expect one or two students to hit this — pair them up, or have a spare
+   laptop at the table.
 4. **Brief volunteers** with the answer keys — the three Station 2 bugs and the three
    Station 3 traps. Those live in the volunteer guide, not in this repo.
 
