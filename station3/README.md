@@ -1,34 +1,35 @@
 # Station 3 — Prompt Problem
 
-**You will not write any code at this station.** We want you to practice crafting a prompt and decomposing a problem into technical requirements. 
+**You will not write any code at this station.** We want you to practice crafting a prompt and decomposing a problem into technical requirements.
 
 ## How it works
 
-1. **Ask the engineer to describe the problem out loud.** The requirements are
-   given verbally and are not written down anywhere.
-2. Study the table and work out what the program does. **The table plus what the
-   engineer tells you is all you get.**
-3. Write a prompt describing it. Start your prompt with:
-   > Write me a JavaScript function named `solve` that takes one string argument and returns one string. The function should...
-4. Paste the generated code into `solve.js`, **exactly as the AI gave it to you**.
-5. Run `npm run station3`.
-6. If cases fail, **edit your prompt and paste the new code. Never hand-edit the code.**
+1. Write a prompt describing the task below. Start with:
+   > Write me a JavaScript function named `solve` that takes one string argument and returns an array of strings. The function should...
+2. Paste the generated code into `solve.js`, **exactly as the AI gave it to you**.
+3. Run `npm run station3`.
+4. If cases fail, **edit your prompt and paste the new code. Never hand-edit the code.**
 
-## What the function should do
+## The task
 
-| Input | Expected output |
+Return every word in the text that begins with a vowel.
+
+- Vowels are `a e i o u`. `y` is never a vowel.
+- Case-insensitive: `Apple` and `apple` both count.
+- Keep the original capitalization, keep duplicates, keep the order they appear in.
+- Return `[]` if nothing matches.
+
+## Examples
+
+| Input | Output |
 |---|---|
-| `"1.0 1.4 1.8 5.0 9.0"` | `1.40` |
-| `"5.0 9.0 1.0 1.2 1.5"` | `1.23` |
-| `"1.0 1.1 1.2 1.3 1.4"` | `1.10` |
-| `"1.0 1.2 1.4 1.6 5.0"` | `1.20` |
-| `"1.0 1.6 2.0 2.4 2.8"` | `2.00` |
-| `"10.0 9.5 9.0 1.0 1.0"` | `9.50` |
-| `"  4.0   4.5  5.0 1.0 2.0 "` | `4.50` |
-| `"1.0 5.0 1.0 5.0 1.0"` | `ERROR: NO VALID SEQUENCE` |
-| `"1.0 1.1 1.2"` | `ERROR: EXPECTED 5 VALUES` |
-| `"1.0 20.0 1.2"` | `ERROR: EXPECTED 5 VALUES` |
-| `"1.0 1.1 1.2 1.3 10.5"` | `ERROR: VALUE OUT OF RANGE` |
-| `"0.5 1.0 1.2 1.3 1.4"` | `ERROR: VALUE OUT OF RANGE` |
-| `"1.0 abc 1.2 1.3 1.4"` | `ERROR: VALUE OUT OF RANGE` |
+| `"an apple a day"` | `["an", "apple", "a"]` |
+| `"Every good boy"` | `["Every"]` |
+| `"I ate an orange!"` | `["I", "ate", "an", "orange"]` |
+| `"yellow yams only"` | `["only"]` |
+| `"The quick brown fox"` | `[]` |
+| `""` | `[]` |
 
+The runner also checks **13 hidden cases** using messier text. The task above is
+the whole task — but "word" is doing a lot of work in that sentence. Decide what
+it means before you write your prompt.
