@@ -29,7 +29,3 @@ Return every word in the text that begins with a vowel.
 | `"yellow yams only"` | `["only"]` |
 | `"The quick brown fox"` | `[]` |
 | `""` | `[]` |
-
-The runner also checks **13 hidden cases** using messier text. The task above is
-the whole task — but "word" is doing a lot of work in that sentence. Decide what
-it means before you write your prompt.
